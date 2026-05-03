@@ -220,7 +220,6 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
     ],
     quotes: [
       { text: "Si me pierdo, que me busquen en Cuba o en Andalucía.", author: "Federico García Lorca (1930)" },
-      { text: "Tengo un amor en La Habana,\ny el otro en Andalucía.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
       { text: "Canto un tango y es una habanera,\nla misma manera.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
       { text: "Tengo mi alma en La Habana,\nno se me puede olvidar.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
       { text: "La Habana es Cádiz con más negritos,\nCádiz es La Habana con más salero.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz' (1986)" },
