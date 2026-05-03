@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { THEMES, SVGS, type ThemeKey } from "./journal-data";
+import { THEMES, type ThemeKey } from "./journal-data";
 import { journalCSS } from "./journal-styles";
 import { saveEntry } from "./actions";
 
@@ -81,7 +81,6 @@ export default function JournalClient(props: {
   const saveTimer = useRef<number | null>(null);
 
   const t = THEMES[entry.theme];
-  const svg = SVGS[entry.theme];
   const dateText = useMemo(() => formatDateLabel(props.date), [props.date]);
   const quote = useMemo(() => {
     const idx = (dailyIndex(t.quotes, props.date) + quoteOffset) % t.quotes.length;
@@ -508,18 +507,8 @@ export default function JournalClient(props: {
           </>
         )}
 
-        {/* Corner mascot */}
-        <div
-          className="corner-mascot"
-          dangerouslySetInnerHTML={{ __html: svg.corner }}
-        />
-
         <div className="container">
           <header className="masthead">
-            <div
-              className="header-svg"
-              dangerouslySetInnerHTML={{ __html: svg.header }}
-            />
             <div className="eyebrow">{t.eyebrow}</div>
             <h1>
               {t.title} <span className="mark">{t.mark}</span>
@@ -606,10 +595,15 @@ export default function JournalClient(props: {
 
           <section className="breath-section">
             <div className="breath-title">{t.breathTitle}</div>
-            <div
-              className="breath-mascot"
-              dangerouslySetInnerHTML={{ __html: svg.breath }}
-            />
+            <div className="breath-mascot">
+              <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                <g className="body">
+                  <circle cx="100" cy="70" r="48" fill="var(--accent)" opacity="0.12"/>
+                  <circle cx="100" cy="70" r="34" fill="var(--accent)" opacity="0.35"/>
+                  <circle cx="100" cy="70" r="22" fill="var(--accent)"/>
+                </g>
+              </svg>
+            </div>
             <div className="breath-label">{t.breathLabel}</div>
           </section>
 

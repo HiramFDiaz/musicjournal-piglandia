@@ -402,44 +402,16 @@ export const SVGS: Record<ThemeKey, SvgSet> = {
       <rect x="50" y="34" width="3" height="6" fill="var(--accent-deep)" rx="1"/>
       <text x="10" y="22" font-family="Caveat, cursive" font-size="14" fill="var(--ink-faint)" opacity="0.7">tum~</text>
     </svg>`,
-    breath: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+    breath: `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
       <g class="body">
-        <!-- Cuban tres / Spanish-guitar shape: single body ellipse with bg-colored notches at the waist (top and bottom) carving the hourglass silhouette -->
-        <!-- Headstock -->
-        <rect x="10" y="50" width="26" height="20" fill="var(--accent-deep)" rx="2"/>
-        <!-- 6 tuning pegs: 3 top, 3 bottom -->
-        <circle cx="16" cy="55" r="1.6" fill="var(--accent-soft)"/>
-        <circle cx="23" cy="55" r="1.6" fill="var(--accent-soft)"/>
-        <circle cx="30" cy="55" r="1.6" fill="var(--accent-soft)"/>
-        <circle cx="16" cy="65" r="1.6" fill="var(--accent-soft)"/>
-        <circle cx="23" cy="65" r="1.6" fill="var(--accent-soft)"/>
-        <circle cx="30" cy="65" r="1.6" fill="var(--accent-soft)"/>
-        <!-- Nut -->
-        <rect x="36" y="55" width="2" height="10" fill="var(--bg)" opacity="0.7"/>
-        <!-- Neck with frets -->
-        <rect x="38" y="56" width="52" height="8" fill="var(--accent-deep)"/>
-        <line x1="48" y1="56" x2="48" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
-        <line x1="58" y1="56" x2="58" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
-        <line x1="68" y1="56" x2="68" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
-        <line x1="78" y1="56" x2="78" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
-        <!-- Body: single ellipse covering the full guitar body -->
-        <ellipse cx="143" cy="60" rx="53" ry="32" fill="var(--accent)"/>
-        <!-- Waist notches: bg-colored circles bite into the top and bottom of the body to carve the hourglass -->
-        <circle cx="120" cy="22" r="16" fill="var(--bg)"/>
-        <circle cx="120" cy="98" r="16" fill="var(--bg)"/>
-        <!-- Soundhole in lower bout -->
-        <circle cx="158" cy="60" r="8" fill="var(--accent-deep)"/>
-        <circle cx="158" cy="60" r="5" fill="var(--bg)" opacity="0.5"/>
-        <!-- Bridge -->
-        <rect x="170" y="68" width="16" height="3" fill="var(--accent-deep)" rx="0.5"/>
-        <!-- 3 parallel string courses, running flat from nut to bridge -->
-        <line x1="38" y1="58" x2="186" y2="68.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
-        <line x1="38" y1="60" x2="186" y2="69.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
-        <line x1="38" y1="62" x2="186" y2="70.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
+        <!-- System emoji — renders as Apple Color Emoji on Mac/iOS, native emoji font on other platforms. -->
+        <text x="100" y="80" text-anchor="middle" dominant-baseline="middle"
+              font-family="'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif"
+              font-size="96">🎸</text>
         <!-- Music notes -->
-        <text x="178" y="28" font-family="Caveat, cursive" font-size="22" fill="var(--accent-soft)" opacity="0.85">♫</text>
-        <text x="184" y="48" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.65">♪</text>
-        <text x="178" y="108" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.55">♪</text>
+        <text x="178" y="36" font-family="Caveat, cursive" font-size="22" fill="var(--accent-soft)" opacity="0.85">♫</text>
+        <text x="186" y="60" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.65">♪</text>
+        <text x="178" y="124" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.55">♪</text>
       </g>
     </svg>`
   },
