@@ -404,33 +404,42 @@ export const SVGS: Record<ThemeKey, SvgSet> = {
     </svg>`,
     breath: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
       <g class="body">
-        <!-- Cuban tres: round body on right, neck on left -->
-        <ellipse cx="148" cy="60" rx="36" ry="26" fill="var(--accent)"/>
-        <ellipse cx="148" cy="60" rx="10" ry="7" fill="var(--accent-deep)" opacity="0.55"/>
-        <ellipse cx="148" cy="60" rx="6" ry="4" fill="var(--bg)" opacity="0.45"/>
-        <rect x="22" y="54" width="100" height="12" fill="var(--accent)" rx="3"/>
-        <!-- bridge / saddle -->
-        <rect x="135" y="58" width="14" height="3" fill="var(--accent-deep)" rx="0.5"/>
-        <!-- frets -->
-        <line x1="40" y1="54" x2="40" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <line x1="55" y1="54" x2="55" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <line x1="70" y1="54" x2="70" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <line x1="85" y1="54" x2="85" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <line x1="100" y1="54" x2="100" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <line x1="115" y1="54" x2="115" y2="66" stroke="var(--bg-deep)" stroke-width="0.6"/>
-        <!-- tuning peg holes (4 visible: tres has 6 strings in 3 courses, often 4 visible at headstock) -->
-        <ellipse cx="30" cy="50" rx="2.5" ry="2.5" fill="var(--accent-deep)"/>
-        <ellipse cx="42" cy="50" rx="2.5" ry="2.5" fill="var(--accent-deep)"/>
-        <ellipse cx="54" cy="50" rx="2.5" ry="2.5" fill="var(--accent-deep)"/>
-        <ellipse cx="66" cy="50" rx="2.5" ry="2.5" fill="var(--accent-deep)"/>
-        <!-- strings: 3 courses across the body + neck -->
-        <line x1="22" y1="58" x2="135" y2="59" stroke="var(--bg)" stroke-width="0.5" opacity="0.7"/>
-        <line x1="22" y1="60" x2="135" y2="60" stroke="var(--bg)" stroke-width="0.5" opacity="0.7"/>
-        <line x1="22" y1="62" x2="135" y2="61" stroke="var(--bg)" stroke-width="0.5" opacity="0.7"/>
-        <!-- music notes around the body -->
-        <text x="170" y="38" font-family="Caveat, cursive" font-size="22" fill="var(--accent-soft)" opacity="0.85">♫</text>
-        <text x="184" y="68" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.65">♪</text>
-        <text x="174" y="92" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.55">♪</text>
+        <!-- Cuban tres / Spanish-guitar shape: single body ellipse with bg-colored notches at the waist (top and bottom) carving the hourglass silhouette -->
+        <!-- Headstock -->
+        <rect x="10" y="50" width="26" height="20" fill="var(--accent-deep)" rx="2"/>
+        <!-- 6 tuning pegs: 3 top, 3 bottom -->
+        <circle cx="16" cy="55" r="1.6" fill="var(--accent-soft)"/>
+        <circle cx="23" cy="55" r="1.6" fill="var(--accent-soft)"/>
+        <circle cx="30" cy="55" r="1.6" fill="var(--accent-soft)"/>
+        <circle cx="16" cy="65" r="1.6" fill="var(--accent-soft)"/>
+        <circle cx="23" cy="65" r="1.6" fill="var(--accent-soft)"/>
+        <circle cx="30" cy="65" r="1.6" fill="var(--accent-soft)"/>
+        <!-- Nut -->
+        <rect x="36" y="55" width="2" height="10" fill="var(--bg)" opacity="0.7"/>
+        <!-- Neck with frets -->
+        <rect x="38" y="56" width="52" height="8" fill="var(--accent-deep)"/>
+        <line x1="48" y1="56" x2="48" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
+        <line x1="58" y1="56" x2="58" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
+        <line x1="68" y1="56" x2="68" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
+        <line x1="78" y1="56" x2="78" y2="64" stroke="var(--bg)" stroke-width="0.4" opacity="0.7"/>
+        <!-- Body: single ellipse covering the full guitar body -->
+        <ellipse cx="143" cy="60" rx="53" ry="32" fill="var(--accent)"/>
+        <!-- Waist notches: bg-colored circles bite into the top and bottom of the body to carve the hourglass -->
+        <circle cx="120" cy="22" r="16" fill="var(--bg)"/>
+        <circle cx="120" cy="98" r="16" fill="var(--bg)"/>
+        <!-- Soundhole in lower bout -->
+        <circle cx="158" cy="60" r="8" fill="var(--accent-deep)"/>
+        <circle cx="158" cy="60" r="5" fill="var(--bg)" opacity="0.5"/>
+        <!-- Bridge -->
+        <rect x="170" y="68" width="16" height="3" fill="var(--accent-deep)" rx="0.5"/>
+        <!-- 3 parallel string courses, running flat from nut to bridge -->
+        <line x1="38" y1="58" x2="186" y2="68.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
+        <line x1="38" y1="60" x2="186" y2="69.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
+        <line x1="38" y1="62" x2="186" y2="70.5" stroke="var(--bg)" stroke-width="0.4" opacity="0.75"/>
+        <!-- Music notes -->
+        <text x="178" y="28" font-family="Caveat, cursive" font-size="22" fill="var(--accent-soft)" opacity="0.85">♫</text>
+        <text x="184" y="48" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.65">♪</text>
+        <text x="178" y="108" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.55">♪</text>
       </g>
     </svg>`
   },
