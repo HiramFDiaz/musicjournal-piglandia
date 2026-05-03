@@ -1,6 +1,6 @@
 // Themes and SVG mascots for the music journal — five musical voices.
 
-export type ThemeKey = "cuban" | "flamenco" | "jazz" | "rock" | "hiphop" | "lounge";
+export type ThemeKey = "cuban" | "flamenco" | "idayvuelta" | "jazz" | "rock" | "hiphop" | "lounge";
 
 export type ThemeMood = { glyph: string; label: string };
 export type ThemeQuote = { text: string; author: string };
@@ -179,6 +179,74 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "What rhythm have you been tapping out without realizing — your zapateado of the day?"
     ],
     audio: { title: "Canción del Olé", artist: "La Niña de los Peines, con Melchor de Marchena (guitarra), 1946", videoId: "rLQY8RgpzUU" }
+  },
+
+  idayvuelta: {
+    palette: {
+      bg: '#f4e7d4', bgDeep: '#e2d0b3', ink: '#241608', inkSoft: '#5a3618',
+      inkFaint: '#a08568', accent: '#a85428', accentSoft: '#d49072',
+      accentDeep: '#6e3414', card: '#fbf2e2',
+      glowA: 'rgba(168, 84, 40, 0.20)', glowB: 'rgba(40, 100, 140, 0.18)'
+    },
+    mark: '🌊',
+    markLarge: '🌊',
+    divMark: '⚓',
+    divMarkEnd: '⚓ 🌊 ⚓',
+    eyebrow: 'Vol. I · a journal between two ports',
+    title: 'Tengo un amor en La Habana,',
+    titleSub: 'y el otro en Andalucía.',
+    moodHeading: 'how the bridge of you feels today',
+    gratitudeHeading: 'three small crossings',
+    gratitudePrompt: 'Little things worth a salt-air breath today—',
+    gratitudePlaceholder: 'a familiar smell from far away, a song from elsewhere, a postcard...',
+    intentionHeading: "today's between-ports intention",
+    intentionPrompt: "What I'm carrying across today—",
+    intentionPlaceholder: 'one word, one wish, one cargo...',
+    breathTitle: '~ a pause between coasts ~',
+    breathLabel: 'breathe in ~ exhale on the swell',
+    reflectHeading: 'between coasts, reflect',
+    reflectPlaceholder: 'write freely, the way a guajira flamenca holds two countries in one melody...',
+    eveningHeading: 'as the boat drops anchor',
+    eveningPrompt: "One thing I'm setting on the water before sleep—",
+    eveningPlaceholder: 'a worry, a homesickness, a wave...',
+    buttonText: 'otra travesía',
+    colophon: 'written between Cádiz and La Habana<br><em>be like the habanera — born in two places at once</em>',
+    breathWave1: '~ ~ ~',
+    breathWave2: '⚓',
+    moods: [
+      {glyph:'🌊', label:'between coasts'}, {glyph:'🛳️', label:'in transit'},
+      {glyph:'⚓', label:'at anchor'}, {glyph:'🌅', label:'dawn-bound'},
+      {glyph:'🥃', label:'patio glass'}, {glyph:'🎶', label:'in two registers'}
+    ],
+    quotes: [
+      { text: "Si me pierdo, que me busquen en Cuba o en Andalucía.", author: "Federico García Lorca (1930)" },
+      { text: "Tengo un amor en La Habana,\ny el otro en Andalucía.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
+      { text: "Canto un tango y es una habanera,\nla misma manera.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
+      { text: "Tengo mi alma en La Habana,\nno se me puede olvidar.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz'" },
+      { text: "La Habana es Cádiz con más negritos,\nCádiz es La Habana con más salero.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Cádiz' (1986)" },
+      { text: "Aún recuerdo el piano de aquella niña\nque había en Sevilla.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Sevilla'" },
+      { text: "Viva Triana\ny los barcos que vienen desde La Habana.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Sevilla'" },
+      { text: "Ay, que se fue pa' Cuba,\nay, que venga por Dios.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Sevilla'" },
+      { text: "La novia del embarcado\nnunca la siesta dormía.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Sevilla'" },
+      { text: "Escriben sus blancas manos\ncartas de amores\nque han de volver.", author: "Antonio Burgos & Carlos Cano, 'Habaneras de Sevilla'" },
+      { text: "El cante jondo se acerca al ritmo del corazón,\nel mismo en Andalucía y en las Antillas.", author: "Federico García Lorca (paráfrasis de su conferencia en La Habana, 1930)" },
+      { text: "Lorca conceived his theory of the duende in Havana — the bridge made the lecture possible.", author: "literary record, 1930" },
+      { text: "La guajira, la colombiana, la milonga, la rumba — son las músicas que aprendieron a navegar.", author: "Refrán flamenco moderno" },
+      { text: "Yo soy un hombre sincero, de donde crece la palma.", author: "José Martí (escrito en parte durante su exilio en España)" },
+      { text: "Cada habanera lleva dos memorias: la del puerto que la recibió y la del puerto que la envió.", author: "anonymous (cantos de ida y vuelta tradition)" },
+      { text: "El son cubano y el flamenco hablan distinto pero piensan igual.", author: "anonymous (cantos de ida y vuelta tradition)" },
+      { text: "Donde se cruzan dos mares, nace una habanera.", author: "anonymous (cantos de ida y vuelta tradition)" }
+    ],
+    reflections: [
+      "What in your day belongs to two places at once?",
+      "Where in your life are you in transit between something old and something new?",
+      "What language, sound, or rhythm connects you to a place you can no longer reach in person?",
+      "Where can you be both Cádiz and La Habana today — both formal and warm, both salt-aired and sun-soaked?",
+      "What 'crossing' have you been postponing?",
+      "Whose ancestral music do you carry, even when you're not singing?",
+      "What inheritance are you sending forward today, the way a habanera was sent back across the sea?"
+    ],
+    audio: { title: "Habaneras de Cádiz", artist: "Carlos Cano (letra de Antonio Burgos)", videoId: "P-e67W1omeg" }
   },
 
   jazz: {
@@ -503,6 +571,12 @@ export const SVGS: Record<ThemeKey, SvgSet> = {
   },
 
   flamenco: {
+    header: `<svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg"></svg>`,
+    corner: `<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"></svg>`,
+    breath: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"></svg>`
+  },
+
+  idayvuelta: {
     header: `<svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg"></svg>`,
     corner: `<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"></svg>`,
     breath: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"></svg>`
