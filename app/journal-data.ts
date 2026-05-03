@@ -1,6 +1,6 @@
 // Themes and SVG mascots for the music journal — five musical voices.
 
-export type ThemeKey = "cuban" | "jazz" | "rock" | "hiphop" | "lounge";
+export type ThemeKey = "cuban" | "flamenco" | "jazz" | "rock" | "hiphop" | "lounge";
 
 export type ThemeMood = { glyph: string; label: string };
 export type ThemeQuote = { text: string; author: string };
@@ -112,6 +112,73 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "What's the verse you keep almost writing? Try one line of it now."
     ],
     audio: { title: "Suavecito", artist: "Septeto Nacional de Ignacio Piñeiro", videoId: "9BqROx9jS_Q" }
+  },
+
+  flamenco: {
+    palette: {
+      bg: '#f4dfd0', bgDeep: '#e6c5af', ink: '#2c0d08', inkSoft: '#52201a',
+      inkFaint: '#9a7060', accent: '#a0211d', accentSoft: '#d77370',
+      accentDeep: '#671310', card: '#fbede0',
+      glowA: 'rgba(160, 33, 29, 0.22)', glowB: 'rgba(204, 154, 60, 0.20)'
+    },
+    mark: '🌹',
+    markLarge: '🌹',
+    divMark: '✦',
+    divMarkEnd: '✦ 🌹 ✦',
+    eyebrow: 'Vol. I · a journal for the duende',
+    title: 'El olé es como una rosa,',
+    titleSub: 'que sale del corazón.',
+    moodHeading: 'how the duende of you feels today',
+    gratitudeHeading: 'three small sparks',
+    gratitudePrompt: 'Little things worth a slow smolder today—',
+    gratitudePlaceholder: 'a deep breath, a ringing chord, the heat of the afternoon...',
+    intentionHeading: "today's quejío intention",
+    intentionPrompt: "What I'm calling out today—",
+    intentionPlaceholder: 'one word, one wish, one cry...',
+    breathTitle: '~ a pause to feel the duende ~',
+    breathLabel: 'breathe in ~ exhale on the cante',
+    reflectHeading: 'sit with it and reflect',
+    reflectPlaceholder: 'write freely, the way a soleá moves through the room...',
+    eveningHeading: 'as the tablao quiets',
+    eveningPrompt: "One thing I'm leaving on the boards before sleep—",
+    eveningPlaceholder: 'a worry, a half-finished verse, a small ache of the day...',
+    buttonText: 'otra letra',
+    colophon: 'written in deep red on dust-warm paper<br><em>be like the duende — found, not summoned</em>',
+    breathWave1: '✦ ✦',
+    breathWave2: '¡olé!',
+    moods: [
+      {glyph:'🌹', label:'con duende'}, {glyph:'💃', label:'zapateando'},
+      {glyph:'🌙', label:'noche andaluza'}, {glyph:'🔥', label:'entre llamas'},
+      {glyph:'🥀', label:'pena negra'}, {glyph:'☀️', label:'sol y sombra'}
+    ],
+    quotes: [
+      { text: "Tiene el duende a quien lo busca.", author: "" },
+      { text: "El duende no está en la garganta;\nel duende sube por dentro,\ndesde la planta de los pies.", author: "Federico García Lorca, 'Teoría y juego del duende'" },
+      { text: "El duende quiere combatir al artista al borde mismo del pozo.", author: "Federico García Lorca, 'Teoría y juego del duende'" },
+      { text: "El duende no llega si no ve posibilidad de muerte.", author: "Federico García Lorca, 'Teoría y juego del duende'" },
+      { text: "Verde que te quiero verde.\nVerde viento. Verdes ramas.\nEl barco sobre la mar\ny el caballo en la montaña.", author: "Federico García Lorca, 'Romance sonámbulo'" },
+      { text: "La pena no es la pena;\nes lo que se queda después.", author: "Copla flamenca (anónima)" },
+      { text: "Si supiera que cantando\ntu pena se aliviaría,\nhasta perder el sentido\nyo cantaría, cantaría.", author: "Copla flamenca (anónima)" },
+      { text: "Era yo niño y te oí cantar,\ny me hiciste hombre.", author: "Camarón de la Isla (atribuida)" },
+      { text: "Como el agua, soy como el agua.", author: "Camarón de la Isla, 'Como el Agua'" },
+      { text: "El cante jondo se acerca al trino del pájaro,\nal canto del gallo,\nal eco del bosque.", author: "Federico García Lorca, 'Importancia histórica y artística del primitivo canto andaluz'" },
+      { text: "Solo el misterio nos hace vivir.\nSolo el misterio.", author: "Federico García Lorca" },
+      { text: "Yo creo en el flamenco porque creo en lo que no se puede explicar.", author: "Paco de Lucía (atribuida)" },
+      { text: "El que canta su mal espanta;\nel que llora, lo aumenta.", author: "Refrán andaluz" },
+      { text: "Córdoba.\nLejana y sola.\nJaca negra, luna grande,\ny aceitunas en mi alforja.", author: "Federico García Lorca, 'Canción de jinete'" },
+      { text: "La música, la danza y la poesía.\nLas tres han de ser una sola.", author: "Manuel de Falla (atribuida)" },
+      { text: "Quien no sienta el cante hondo\nno sabe lo que es vivir.", author: "Copla flamenca (anónima)" }
+    ],
+    reflections: [
+      "What is your day asking you to call out, instead of swallow?",
+      "Where would you rather feel the burn than smooth it over?",
+      "What ancestor's voice has been near you this week?",
+      "If your evening were a soleá, what would it slow down to?",
+      "What duende moment almost passed today without your naming it?",
+      "Where can you sit still long enough for the cante to find you?",
+      "What rhythm have you been tapping out without realizing — your zapateado of the day?"
+    ],
+    audio: { title: "Canción del Olé", artist: "La Niña de los Peines, con Melchor de Marchena (guitarra), 1946", videoId: "rLQY8RgpzUU" }
   },
 
   jazz: {
@@ -433,6 +500,12 @@ export const SVGS: Record<ThemeKey, SvgSet> = {
         <text x="178" y="124" font-family="Caveat, cursive" font-size="18" fill="var(--accent-soft)" opacity="0.55">♪</text>
       </g>
     </svg>`
+  },
+
+  flamenco: {
+    header: `<svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg"></svg>`,
+    corner: `<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"></svg>`,
+    breath: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"></svg>`
   },
 
   jazz: {

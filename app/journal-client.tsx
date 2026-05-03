@@ -55,7 +55,7 @@ function dailyIndex(arr: unknown[], iso: string): number {
 }
 
 function isThemeKey(k: string | null | undefined): k is ThemeKey {
-  return k === "cuban" || k === "jazz" || k === "rock" || k === "hiphop" || k === "lounge";
+  return k === "cuban" || k === "flamenco" || k === "jazz" || k === "rock" || k === "hiphop" || k === "lounge";
 }
 
 export default function JournalClient(props: {
@@ -210,6 +210,7 @@ export default function JournalClient(props: {
             onChange={(e) => patch("theme", e.target.value as ThemeKey)}
           >
             <option value="cuban">🎺 cuban</option>
+            <option value="flamenco">🌹 flamenco</option>
             <option value="jazz">🎷 jazz</option>
             <option value="rock">🎸 rock</option>
             <option value="hiphop">🎤 hiphop</option>

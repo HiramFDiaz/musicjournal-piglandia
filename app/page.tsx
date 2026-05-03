@@ -4,7 +4,7 @@ import { getEntryForDate, listEntryDates } from "./actions";
 import JournalClient from "./journal-client";
 import type { ThemeKey } from "./journal-data";
 
-const VALID_THEMES = new Set(["cuban", "jazz", "rock", "hiphop", "lounge"]);
+const VALID_THEMES = new Set(["cuban", "flamenco", "jazz", "rock", "hiphop", "lounge"]);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function todayDateString(): string {
