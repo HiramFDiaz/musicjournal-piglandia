@@ -232,7 +232,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       { text: "El cante jondo se acerca al ritmo del corazón,\nel mismo en Andalucía y en las Antillas.", author: "Federico García Lorca (paráfrasis de su conferencia en La Habana, 1930)" },
       { text: "Lorca conceived his theory of the duende in Havana — the bridge made the lecture possible.", author: "literary record, 1930" },
       { text: "La guajira, la colombiana, la milonga, la rumba — son las músicas que aprendieron a navegar.", author: "Refrán flamenco moderno" },
-      { text: "Yo soy un hombre sincero, de donde crece la palma.", author: "José Martí (escrito en parte durante su exilio en España)" },
+      { text: "Yo soy un hombre sincero, de donde crece la palma.", author: "José Martí, Versos Sencillos I (poeta deportado a España a los 18, conoció ambos mundos)" },
       { text: "Cada habanera lleva dos memorias: la del puerto que la recibió y la del puerto que la envió.", author: "anonymous (cantos de ida y vuelta tradition)" },
       { text: "El son cubano y el flamenco hablan distinto pero piensan igual.", author: "anonymous (cantos de ida y vuelta tradition)" },
       { text: "Donde se cruzan dos mares, nace una habanera.", author: "anonymous (cantos de ida y vuelta tradition)" }
