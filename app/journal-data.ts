@@ -287,6 +287,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
     ],
     quotes: [
       { text: "There are no wrong notes in jazz: only notes in the wrong places.", author: "Miles Davis" },
+      { text: "If you can't manage to put tinges of Spanish in your tunes, you will never be able to get the right seasoning, I call it, for jazz.", author: "Jelly Roll Morton (Library of Congress sessions, 1938)" },
       { text: "Don't play what's there, play what's not there.", author: "Miles Davis" },
       { text: "Sometimes you have to play a long time to be able to play like yourself.", author: "Miles Davis" },
       { text: "Time isn't the main thing. It's the only thing.", author: "Miles Davis" },
@@ -358,6 +359,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
     ],
     quotes: [
       { text: "It's better to burn out than to fade away.", author: "Neil Young, 'Hey Hey, My My'" },
+      { text: "The blues had a baby and they called it rock and roll.", author: "Muddy Waters, 'Hard Again' (1977)" },
       { text: "He not busy being born is busy dying.", author: "Bob Dylan, 'It's Alright, Ma (I'm Only Bleeding)'" },
       { text: "Life is what happens to you while you're busy making other plans.", author: "John Lennon, 'Beautiful Boy'" },
       { text: "When the power of love overcomes the love of power, the world will know peace.", author: "Jimi Hendrix" },
@@ -431,6 +433,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
     ],
     quotes: [
       { text: "Reality is wrong. Dreams are for real.", author: "Tupac Shakur" },
+      { text: "We were adopting the tradition of the West African griot — that was where we wanted to go.", author: "Brian Jackson (Gil Scott-Heron's collaborator, on the proto-hip-hop spoken-word/jazz tradition)" },
       { text: "It was all a dream,\nI used to read Word Up Magazine.", author: "The Notorious B.I.G., 'Juicy'" },
       { text: "You only get one shot, do not miss your chance to blow.\nThis opportunity comes once in a lifetime.", author: "Eminem, 'Lose Yourself'" },
       { text: "Real eyes realize real lies.", author: "Tupac Shakur" },
@@ -502,6 +505,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
     ],
     quotes: [
       { text: "I have measured out my life with coffee spoons.", author: "T.S. Eliot, 'The Love Song of J. Alfred Prufrock'" },
+      { text: "I have endeavored to combine the Cuban rhythms with my own thematic material.", author: "George Gershwin, 'Cuban Overture' programme notes (1932)" },
       { text: "Moon River, wider than a mile,\nI'm crossing you in style someday.", author: "Henry Mancini & Johnny Mercer, 'Moon River'" },
       { text: "Two drifters off to see the world,\nthere's such a lot of world to see.", author: "Henry Mancini & Johnny Mercer, 'Moon River'" },
       { text: "Tall and tan and young and lovely,\nthe girl from Ipanema goes walking.", author: "Vinicius de Moraes & Antonio Carlos Jobim, 'The Girl from Ipanema'" },
