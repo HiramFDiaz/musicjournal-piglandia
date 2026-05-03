@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Reset/base only — journal-styles.ts brings the full themed CSS for the journal page. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #f7ecd9; }
