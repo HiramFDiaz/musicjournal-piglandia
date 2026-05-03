@@ -528,7 +528,7 @@ export default function JournalClient(props: {
           <section className="quote-section">
             <div className="quote-card" data-mark={t.mark}>
               <blockquote>{quote.text}</blockquote>
-              <div className="attribution">{quote.author}</div>
+              {quote.author && <div className="attribution">{quote.author}</div>}
             </div>
             <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
               <button
