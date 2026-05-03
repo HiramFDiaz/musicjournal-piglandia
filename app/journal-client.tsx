@@ -83,9 +83,9 @@ export default function JournalClient(props: {
   const t = THEMES[entry.theme];
   const dateText = useMemo(() => formatDateLabel(props.date), [props.date]);
   const quote = useMemo(() => {
-    const idx = (dailyIndex(t.quotes, props.date) + quoteOffset) % t.quotes.length;
+    const idx = quoteOffset % t.quotes.length;
     return t.quotes[idx];
-  }, [t.quotes, quoteOffset, props.date]);
+  }, [t.quotes, quoteOffset]);
   const reflectionPrompt = useMemo(() => {
     const idx = dailyIndex(t.reflections, props.date);
     return t.reflections[idx];
@@ -530,6 +530,15 @@ export default function JournalClient(props: {
               <blockquote>{quote.text}</blockquote>
               <div className="attribution">{quote.author}</div>
             </div>
+            <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+              <button
+                type="button"
+                className="new-quote-btn"
+                onClick={() => setQuoteOffset((q) => q + 1)}
+              >
+                {t.buttonText}
+              </button>
+            </div>
           </section>
 
           <section className="section">
@@ -642,13 +651,6 @@ export default function JournalClient(props: {
               <span className="ornament">{t.divMarkEnd}</span>
               <div className="line" />
             </div>
-            <button
-              type="button"
-              className="new-quote-btn"
-              onClick={() => setQuoteOffset((q) => q + 1)}
-            >
-              {t.buttonText}
-            </button>
             <div
               className="colophon"
               dangerouslySetInnerHTML={{ __html: t.colophon }}
