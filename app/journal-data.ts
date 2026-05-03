@@ -24,6 +24,7 @@ export type ThemeDef = {
   moods: ThemeMood[];
   quotes: ThemeQuote[];
   reflections: string[];
+  audio: { title: string; artist: string; videoId: string };
 };
 
 export type SvgSet = { header: string; corner: string; breath: string };
@@ -72,7 +73,7 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       { text: "Aunque tú me has dejado en el abandono, en mis sueños te colmo de bendiciones.", author: "Miguel Matamoros, 'Lágrimas Negras'" },
       { text: "Te traigo lágrimas negras, como mi vida.", author: "Miguel Matamoros, 'Lágrimas Negras'" },
       { text: "La vida es un sueño, y todo se va.", author: "Arsenio Rodríguez, 'La Vida Es Un Sueño'" },
-      { text: "El que siembra su maíz, que se coma su pinol.", author: "Arsenio Rodríguez (de su canción)" },
+      { text: "El que siembra su maíz, que se coma su pinol.", author: "Trío Matamoros, 'El que siembra su maíz'" },
       { text: "There is nothing more contemporary than the abrupt and unexpected triumph of Cuban music.", author: "Alejo Carpentier, Paris (1922)" },
       { text: "Ese músico que llevo dentro.", author: "Alejo Carpentier" },
       { text: "La música cubana es bermeja, negra, blanca y amarilla.", author: "Fernando Ortiz" },
@@ -108,7 +109,8 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "A son musician knows when to lay back. Where can you lay back today?",
       "What note did yesterday play that you didn't quite finish hearing?",
       "What's the verse you keep almost writing? Try one line of it now."
-    ]
+    ],
+    audio: { title: "Suavecito", artist: "Septeto Nacional de Ignacio Piñeiro", videoId: "9BqROx9jS_Q" }
   },
 
   jazz: {
@@ -178,7 +180,8 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "What blue note in your life keeps surfacing? What does it want?",
       "When did you last let something improvise, instead of arranging it?",
       "What's the standard you've been afraid to play your own way?"
-    ]
+    ],
+    audio: { title: "Do You Know What It Means to Miss New Orleans", artist: "Billie Holiday & Louis Armstrong (1947)", videoId: "7ftMumYGwxI" }
   },
 
   rock: {
@@ -248,7 +251,8 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "Who are you still trying to play to that you should be playing past?",
       "What's the encore you keep refusing to give yourself?",
       "If the amp went quiet for a day, what would you actually hear?"
-    ]
+    ],
+    audio: { title: "Born to Run", artist: "Bruce Springsteen", videoId: "IxuThNgl3YA" }
   },
 
   hiphop: {
@@ -318,7 +322,8 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "What truth would your verse tell if you didn't edit it first?",
       "Where have you been holding back on a beat that wants you to ride it?",
       "What sample from your past keeps looping? What does it want you to hear differently?"
-    ]
+    ],
+    audio: { title: "Insane In The Brain", artist: "Cypress Hill", videoId: "RijB8wnJCN0" }
   },
 
   lounge: {
@@ -388,7 +393,8 @@ export const THEMES: Record<ThemeKey, ThemeDef> = {
       "What conversation have you been having loud that wants to be whispered?",
       "Where has elegance been waiting for permission to enter?",
       "What's the piece you'd play if no one else were listening — would they like it more, or would you?"
-    ]
+    ],
+    audio: { title: "Let's Never Stop Falling in Love", artist: "Pink Martini", videoId: "xhzJyYeMgA4" }
   }
 };
 

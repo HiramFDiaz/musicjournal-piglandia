@@ -78,7 +78,12 @@ export default function JournalClient(props: {
   const [quoteOffset, setQuoteOffset] = useState(0);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [historyOpen, setHistoryOpen] = useState(false);
+  const [audioOpen, setAudioOpen] = useState(false);
   const saveTimer = useRef<number | null>(null);
+
+  // Stop audio whenever the theme changes (the iframe key forces a re-mount on
+  // theme change, but closing the popover is a clearer signal)
+  useEffect(() => { setAudioOpen(false); }, [entry.theme]);
 
   const t = THEMES[entry.theme];
   const dateText = useMemo(() => formatDateLabel(props.date), [props.date]);
@@ -228,6 +233,7 @@ export default function JournalClient(props: {
         >
           ☰ history
         </button>
+
 
         {/* Account / sign-out */}
         <div
@@ -521,6 +527,80 @@ export default function JournalClient(props: {
                 <span style={{ marginLeft: "0.6rem", opacity: 0.7 }}>
                   · <a href="/" style={{ color: "var(--accent)" }}>back to today</a>
                 </span>
+              )}
+            </div>
+
+            {/* Inline audio (theme track) — sits in the negative space between date and quote */}
+            <div style={{ marginTop: "1.6rem", textAlign: "center" }}>
+              <button
+                type="button"
+                aria-label={audioOpen ? "stop track" : "play track"}
+                onClick={() => setAudioOpen((v) => !v)}
+                style={{
+                  background: audioOpen ? "var(--accent)" : "var(--card)",
+                  color: audioOpen ? "var(--card)" : "var(--accent)",
+                  border: "1.5px solid var(--bg-deep)",
+                  borderRadius: 30,
+                  padding: "0.55rem 1.2rem",
+                  boxShadow: "0 4px 14px rgba(42,31,26,.10)",
+                  fontFamily: "Caveat, cursive",
+                  fontSize: "1.15rem",
+                  cursor: "pointer",
+                }}
+              >
+                {audioOpen ? "■ stop track" : `♪ play ${t.audio.title}`}
+              </button>
+              {audioOpen && (
+                <div
+                  style={{
+                    marginTop: "1rem",
+                    background: "var(--card)",
+                    border: "1.5px solid var(--bg-deep)",
+                    borderRadius: 12,
+                    padding: "0.75rem",
+                    boxShadow: "0 8px 22px rgba(42,31,26,.15)",
+                    width: 320,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <iframe
+                    key={`yt-${entry.theme}`}
+                    width="296"
+                    height="167"
+                    src={`https://www.youtube-nocookie.com/embed/${t.audio.videoId}?autoplay=1&rel=0&modestbranding=1`}
+                    title={`${t.audio.title} — ${t.audio.artist}`}
+                    style={{ border: "none", borderRadius: 8, display: "block", margin: "0 auto" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                  <div
+                    style={{
+                      marginTop: "0.5rem",
+                      fontFamily: "Caveat, cursive",
+                      fontSize: "0.95rem",
+                      color: "var(--ink-soft)",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <span>
+                      <strong style={{ color: "var(--ink)" }}>{t.audio.title}</strong>
+                      {" — "}
+                      {t.audio.artist}
+                    </span>
+                    <a
+                      href={`https://www.youtube.com/watch?v=${t.audio.videoId}`}
+                      target="_blank"
+                      rel="noopener"
+                      style={{ color: "var(--accent)", textDecoration: "none" }}
+                    >
+                      open ↗
+                    </a>
+                  </div>
+                </div>
               )}
             </div>
           </header>
